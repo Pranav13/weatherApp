@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns='http://www.ehcache.org/v3'>
+    <cache alias="weatherCache">
+        <key-type>java.lang.String</key-type>
+        <value-type>com.sapient.publicis.weatherapp.model.in.WeatherProcessingResponse</value-type>
+        <expiry>
+            <ttl unit="hours">24</ttl>
+        </expiry>
+
+        <resources>
+            <heap unit="kB">10000</heap>
+        </resources>
+        <heap-store-settings>
+            <max-object-graph-size>20000</max-object-graph-size>
+            <max-object-size unit="kB">50000</max-object-size>
+        </heap-store-settings>
+    </cache>
+</config>
